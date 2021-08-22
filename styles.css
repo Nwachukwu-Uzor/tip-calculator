@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.bill-calculator {
+  margin-top: 10vh;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* .input-section,
+.output-section {
+  border: 1px solid black;
+} */
+
+.grid {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  align-items: stretch;
+  grid-gap: 2em;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.input-section > .input-holder {
+  position: relative;
+  margin: 0.25em 0;
+}
+
+.input-section > .input-holder > input {
+  width: 100%;
+  padding: 0.2em 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: none;
+  background: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  outline: none;
+  text-align: right;
+}
+
+.input-section > .input-holder > input:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.input-section > .input-holder > input::-webkit-inner-spin-button,
+.input-section > .input-holder > input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-section > .input-holder > input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.input-section > .input-holder > .fas {
+  position: absolute;
+  z-index: 3;
+  font-size: 1rem;
+  padding: 0.2em 0.5em;
+  color: hsl(186, 14%, 43%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.button-grid > * {
+  padding: 0.25em 1em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.button-grid > input {
+  background-color: hsl(185, 41%, 84%);
+  width: 100%;
+}
+
+.button-grid > input::placeholder {
+  font-size: 0.95rem;
+}
+
+.button-grid > input::-webkit-outer-spin-button,
+.button-grid > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button-grid > input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.button-grid > input:focus {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.button-grid > .active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.button-grid > button {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+}
+
+.button-grid > button:focus,
+.button-grid > button:active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.output-section {
+  color: hsl(172, 67%, 45%);
+  background-color: hsl(183, 100%, 15%);
+  padding: 1em;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+}
+
+.output-section > .output-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-section > .output-flex h2 {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.output-section > .output-flex h3 {
+  color: hsl(184, 14%, 56%);
+  font-size: 1rem;
+}
+
+.output-section > .reset {
+  width: 100%;
+  align-self: end;
+  padding: 0.25em 0;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.output-section > .reset:focus,
+.output-section > .reset:active,
+.output-section > .reset:hover {
+  background-color: hsl(183, 100%, 46%);
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

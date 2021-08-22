@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="bill-calculator">
+      <h1 class="title">Spli</h1>
+      <h1 class="title">tter</h1>
+      <div class="grid">
+        <div class="input-section">
+          <h2>Bills</h2>
+          <div class="input-holder">
+            <i class="fas fa-dollar-sign"></i>
+            <input type="number" id="bill" />
+          </div>
+
+          <h2>Select Tip %</h2>
+          <div class="button-grid">
+            <button class="btn" data-value="5">5%</button>
+            <button class="btn" data-value="10">10%</button>
+            <button class="btn" data-value="15">15%</button>
+            <button class="btn" data-value="20">20%</button>
+            <button class="btn" data-value="25">25%</button>
+            <input
+              type="number"
+              name="custom"
+              id="custom"
+              placeholder="custom"
+            />
+          </div>
+          <h2>Select No. of People</h2>
+          <div class="input-holder">
+            <i class="fas fa-user"></i>
+            <input type="number" id="people" />
+          </div>
+        </div>
+        <div class="output-section">
+          <div class="output-flex">
+            <div class="text">
+              <h2>Tip Amount</h2>
+              <h3>/ person</h3>
+            </div>
+            <h1 class="value">$ <span id="tip-per-person">0.00</span></h1>
+          </div>
+          <div class="output-flex">
+            <div class="text">
+              <h2>Total</h2>
+              <h3>/ person</h3>
+            </div>
+            <h1 class="value">$ <span id="total-per-person">0.00</span></h1>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
